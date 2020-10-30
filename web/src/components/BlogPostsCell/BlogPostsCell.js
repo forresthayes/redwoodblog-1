@@ -1,11 +1,10 @@
 // web/src/components/BlogPostsCell/BlogPostsCell.js
 
-// import { Link, routes } from '@redwoodjs/router'
-import BlogPost from 'src/components/BlogPost'
+import { Link, routes } from '@redwoodjs/router'
 
 export const QUERY = gql`
-  query BlogPostQuery($id: Int!) {
-    post(id: $id) {
+  query BlogPostsQuery {
+    posts {
       id
       title
       body
@@ -25,7 +24,7 @@ export const Success = ({ posts }) => {
     <article key={post.id}>
       <header>
         <h2>
-          <Link to={routes.blogPost({ id: post.id })}>{post.title}</Link>{' '}
+          <Link to={routes.blogPost({ id: post.id })}>{post.title}</Link>
         </h2>
       </header>
       <p>{post.body}</p>

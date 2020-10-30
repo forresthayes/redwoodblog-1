@@ -6,7 +6,7 @@ import BlogPostCell from 'src/components/BlogPostsCell'
 const BlogPostPage = ({ id }) => {
   return (
     <BlogLayout>
-      <BlogPostCell id={id} />
+      <BlogPostCell />
     </BlogLayout>
   )
 }
